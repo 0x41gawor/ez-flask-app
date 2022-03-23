@@ -1,0 +1,16 @@
+version: '1'
+services:
+  ez-flask-app: 
+    image: ez-flask-app:1.0.1
+    ports:
+      - 5000:5000
+  mongo:
+    image: mongo:latest
+    hostname: mongodb
+    ports: 
+      - 27017:27017
+    environment:
+      MONGO_INITDB_DATABASE: ez_flask_app_db
+      MONGO_INITDB_ROOT_USERNAME: ejek
+      MONGO_INITDB_ROOT_PASSWORD: ejek
+
