@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 def get_db():
-    conn = MongoClient('mongodb://ejek:ejek@localhost:27017/')
+    conn = MongoClient('mongodb://ejek:ejek@mongodb:27017/', connect=False)
     db = conn['ez_flask_app_db']
     return db
 
