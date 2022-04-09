@@ -9,13 +9,13 @@ Now
 do the following staff:
 1. Open Windows Terminal
 2. `docker ps`
-3. `docker exec -it <mongo_container_id> sh`
-4. In container terminal run: `mongosh`
-5. `use admin`
-6. `db.auth("ejek", "ejek")`
-7. `db.ez_flask_app_db.find()`
+3. `docker exec -it <mongo_container_id> mongosh`
+4. `use admin`
+5. `db.auth("ejek", "ejek")`
+6. `use ez_flask_app_db`
+7. `db.animals.find()`
 8. ```
-    db.ez_flask_app_db.insertMany([
+    db.animals.insertMany([
     {
         "id": 1,
         "name": "Lion",
@@ -33,13 +33,11 @@ do the following staff:
     },
     ]);
     ```
-9. `db.ez_flask_app_db.find()`
+9. `db.animals.find()`
 10. DATABASE IS SET UP !!!
 
 Now you can run your app (on the host)
 ```
 python app.py
 ```
-When it will work, you can try to deploy two containers talking to each other with `docker-compose.yml`
-Later you can add some volumes.
 
