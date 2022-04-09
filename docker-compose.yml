@@ -1,7 +1,6 @@
-version: '1'
 services:
   ez-flask-app: 
-    image: ez-flask-app:1.0.1
+    image: ez-flask-app:1.0.2
     ports:
       - 5000:5000
   mongo:
